@@ -1,5 +1,6 @@
 /*
     Port scanner code in c
+    Code originally from http://www.binarytides.com/tcp-connect-port-scanner-c-code-linux-sockets/
 */
 #include<stdio.h>
 #include<stdlib.h>
@@ -33,6 +34,9 @@ int main(int argc , char **argv)
     scanf("%d" , &end);
  
     //Initialise the sockaddr_in structure
+    // TODO: change this strncopy to memset or memcpy instead
+    // since strncopy stops on the first zero
+    // also other instances of strncopy and copy or free structures
     strncpy((char*)&sa , "" , sizeof sa);
     sa.sin_family = AF_INET;
      
