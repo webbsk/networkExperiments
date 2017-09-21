@@ -1,6 +1,9 @@
 /*
     Port scanner code in c
     Code originally from http://www.binarytides.com/tcp-connect-port-scanner-c-code-linux-sockets/
+    To run code:
+         # gcc portscanner.c
+         # ./a.out
 */
 #include<stdio.h>
 #include<stdlib.h>
